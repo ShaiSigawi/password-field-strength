@@ -2,7 +2,6 @@ import './App.css';
 import {useState} from 'react';
 import {React} from 'react';
 import Testing from './Testing';
-//import { isDisabled } from '@testing-library/user-event/dist/utils';
 
 function App() {
   const [password, setPassword] = useState('')
