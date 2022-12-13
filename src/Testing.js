@@ -8,7 +8,6 @@ function Testing(props){
 
     useEffect(() => {
         if (password.length <= 2 && 0 < password.length){
-            //console.log("weak")
             setchar('weak')
          }
 
