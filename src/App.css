@@ -31,3 +31,39 @@
     transform: rotate(360deg);
   }
 }
+
+body{
+  background-color:#5F9EA0;
+  font-family: Lucida Console;
+  font-weight:bolder;
+  text-align: center;
+}
+
+h1{
+  font-family: Lucida Console;
+  font-size: 20;
+  color: #00008B;
+}
+
+input{
+  font-family: Lucida Console;
+  background-color: #F0F8FF;
+  font: small-caption;
+  padding: 10px 24px;
+}
+
+button {
+  font-family:Lucida Console;
+  background-color: #A9A9A9;
+  font-size: 14px;
+  text-align: center;
+  padding: 10px 24px;
+  border-radius: 10%;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 #696969(0,0,0,0.19);
+}
+
+h3{
+  font-family: Lucida Console;
+  font-size: small;
+  color: #8B0000;
+}

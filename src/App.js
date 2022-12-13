@@ -2,38 +2,39 @@ import './App.css';
 import {useState} from 'react';
 import {React} from 'react';
 import Testing from './Testing';
+//import { isDisabled } from '@testing-library/user-event/dist/utils';
 
 function App() {
   const [password, setPassword] = useState('')
-  //const [numChar, setNumChar] = useState(0)
+  
+  const passLength = () =>{
+    if (password.length <= 2 && 0 <= password.length){
+      return 0
+    }
+    else{
+      return password.length
+    } 
+  }
 
   function handlePasswordChange(e){
     console.log(e)
     setPassword(e.target.value)
   }
 
-  function handelPasswordLength(e){
-    if (password.length <= 2 || password.length > 0){
-       //console.log("weak")
-       setPassword('weak')
-    }
-    if (password.length > 2 || password.length <= 6){
-      setPassword('medium')
-  }
-    else{
-     setPassword('strong')
-    }
-  }
-
   return (
     <div className="App">
       <h1>Password App Check</h1>
-      <input value={password} onChange={handlePasswordChange}/>
-      <button>Submit</button>
-      <form onSubmit={handelPasswordLength}></form>
+      
+      <input type="password" value={password}
+      placeholder="start typing pass"
+      onChange={handlePasswordChange}
+      />
+      
+      <button type="button" disabled={!passLength(password.length)}>Submit</button>
       <p>{setPassword}</p>
 
-      <Testing/>
+      <Testing password = {password}
+      />
     </div>
   );
 
